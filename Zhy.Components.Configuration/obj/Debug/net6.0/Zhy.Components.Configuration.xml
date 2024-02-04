@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Zhy.Components.Configuration</name>
+    </assembly>
+    <members>
+        <member name="T:Zhy.Components.Configuration.ConfigurationContextAttribute">
+            <summary>
+            配置上下文特性
+            </summary>
+        </member>
+        <member name="P:Zhy.Components.Configuration.ConfigurationContextAttribute.IsHotload">
+            <summary>
+            配置文件是否热重载（开启时将监测配置文件动态变化，修改后自动刷新至运行时）
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextAttribute.#ctor">
+            <summary>
+            配置上下文特性
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextAttribute.#ctor(System.Boolean)">
+            <summary>
+            配置上下文特性
+            </summary>
+            <param name="isHotLoad">是否热重载</param>
+        </member>
+        <member name="T:Zhy.Components.Configuration.ConfigurationContextBase">
+            <summary>
+            配置上下文基类
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextBase.#ctor">
+            <summary>
+            配置上下文基类
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextBase.GetPersistentPath">
+            <summary>
+            获取持久化路径
+            </summary>
+            <returns>持久化路径</returns>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextBase.Persistent">
+            <summary>
+            持久化
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextBase.Reload">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextBase.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="T:Zhy.Components.Configuration.ConfigurationFileSystemWatcher">
+            <summary>
+            配置文件监视器
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationFileSystemWatcher.#ctor(Zhy.Components.Configuration.IConfigurationContext)">
+            <summary>
+            配置文件监视器
+            </summary>
+            <param name="configurationContext">配置文件上下文</param>
+            <exception cref="T:System.ArgumentNullException">配置文件上下文参数为空异常</exception>
+        </member>
+        <member name="T:Zhy.Components.Configuration.ConfigurationItemAttribute">
+            <summary>
+            配置项特性
+            </summary>
+        </member>
+        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Name">
+            <summary>
+            键值
+            </summary>
+        </member>
+        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Converter">
+            <summary>
+            加密器
+            </summary>
+        </member>
+        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Encipher">
+            <summary>
+            转换器
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor">
+            <summary>
+            配置项特性
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String)">
+            <summary>
+            配置项特性
+            </summary>
+            <param name="name">键值</param>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.Type,System.Type)">
+            <summary>
+            配置项特性
+            </summary>
+            <param name="configurationEncipherType">加密器</param>
+            <param name="configurationConverterType">转换器</param>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Type,System.Type)">
+            <summary>
+            配置项特性
+            </summary>
+            <param name="name">键值</param>
+            <param name="configurationEncipherType">加密器</param>
+            <param name="configurationConverterType">转换器</param>
+        </member>
+        <member name="T:Zhy.Components.Configuration.IConfigurationContext">
+            <summary>
+            配置上下文接口
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationContext.Reload">
+            <summary>
+            重载
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationContext.Persistent">
+            <summary>
+            持久化
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationContext.GetPersistentPath">
+            <summary>
+            获取持久化路径
+            </summary>
+            <returns>持久化路径</returns>
+        </member>
+        <member name="T:Zhy.Components.Configuration.IConfigurationConverter">
+            <summary>
+            配置转换器接口
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationConverter.Read(System.String)">
+            <summary>
+            读取配置
+            </summary>
+            <param name="value">配置文件项值</param>
+            <returns>运行时值</returns>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationConverter.Write(System.Object)">
+            <summary>
+            写入配置
+            </summary>
+            <param name="value">运行时值</param>
+            <returns>配置文件项值</returns>
+        </member>
+        <member name="T:Zhy.Components.Configuration.IConfigurationEncipher">
+            <summary>
+            配置加密器
+            </summary>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationEncipher.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="plaintext">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:Zhy.Components.Configuration.IConfigurationEncipher.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="ciphertext">密文</param>
+            <returns>明文</returns>
+        </member>
+    </members>
+</doc>
