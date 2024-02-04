@@ -6,7 +6,7 @@
 
 [GitHub](https://github.com/WineMonk/Zhy.Components.Configuration.git)
 
-[API帮助文档]([Zhy.Components.Configuration/Doc/Help/CHM at master · WineMonk/Zhy.Components.Configuration (github.com)](https://github.com/WineMonk/Zhy.Components.Configuration/tree/master/Doc/Help/CHM))
+[API帮助文档](https://github.com/WineMonk/Zhy.Components.Configuration/tree/master/Doc/Help/CHM)
 
 Config配置文件组件，支持运行时读取、写入配置，动态监测配置文件无感刷新、加解密、运行时类型转换器...
 
