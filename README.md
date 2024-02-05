@@ -8,7 +8,7 @@
 
 [API帮助文档](https://github.com/WineMonk/Zhy.Components.Configuration/tree/master/Doc/Help/CHM)
 
-Config配置文件组件，支持运行时读取、写入配置，动态监测配置文件无感刷新、加解密、运行时类型转换器...
+Config配置文件组件，支持运行时读取、写入配置、加解密、运行时类型转换器，修改静态配置文件无感刷新运行时配置...
 
 ## Demo
 

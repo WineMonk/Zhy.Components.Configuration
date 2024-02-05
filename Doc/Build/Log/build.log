@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2023.7.8.0" projectFile="D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Zhy.Components.Configuration.shfbproj" started="2024/2/4 13:59:01">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2023.7.8.0" projectFile="D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Zhy.Components.Configuration.shfbproj" started="2024/2/4 15:01:09">
 <buildStep step="Initializing">
 The Sandcastle tools are located in &#39;D:\software\EWSoftware\Sandcastle Help File Builder&#39;
 Locating components in the following folder(s):
@@ -34,10 +34,10 @@ Generating API filter for MRefBuilder...
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
-[D:\software\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-c1989df2-2158-49db-a689-fc09f5584917.proj]
-生成启动时间为 2024/2/4 13:59:02。
+[D:\software\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\MSBuild.exe - GenerateRefInfo-a144235f-c584-4240-b1e8-33ccc9ea3026.proj]
+生成启动时间为 2024/2/4 15:01:10。
 
-节点 1 上的项目“D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\GenerateRefInfo-c1989df2-2158-49db-a689-fc09f5584917.proj”(默认目标)。
+节点 1 上的项目“D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\GenerateRefInfo-a144235f-c584-4240-b1e8-33ccc9ea3026.proj”(默认目标)。
 PrepareForBuild:
   正在创建目录“obj\Debug\”。
 GenerateRefInfo:
@@ -48,8 +48,8 @@ GenerateRefInfo:
   Wrote information on 1 namespaces, 6 types, and 21 members
   Merging duplicate type and member information
   Merged 0 duplicate type(s) and 0 duplicate member(s)
-已完成生成项目“D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\GenerateRefInfo-c1989df2-2158-49db-a689-fc09f5584917.proj”(默认目标)的操作。
-    Last step completed in 00:00:00.7030
+已完成生成项目“D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\GenerateRefInfo-a144235f-c584-4240-b1e8-33ccc9ea3026.proj”(默认目标)的操作。
+    Last step completed in 00:00:00.7400
 </buildStep>
 <buildStep step="ApplyDocumentModel">
 Applying document model to reflection output...
@@ -58,7 +58,7 @@ Applying document model to reflection output...
 <buildStep step="AddNamespaceGroups">
 Adding namespace group entries...
 Added 0 namespace group entries
-    Last step completed in 00:00:00.0070
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="AddApiTopicFilenames">
 Adding topic filenames to API members...
@@ -74,7 +74,7 @@ Generating API topic manifest...
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0020
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
@@ -83,7 +83,7 @@ No additional content to copy
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0000
+    Last step completed in 00:00:00.0010
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file for API content...
@@ -92,18 +92,18 @@ Generating conceptual content intermediate TOC file...
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
-    Last step completed in 00:00:00.0568
+    Last step completed in 00:00:00.0555
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0010
+    Last step completed in 00:00:00.0011
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\BuildAssembler.config
   Updating reference topic configurations.
   No conceptual content.  Removing conceptual content components.
-    Last step completed in 00:00:00.0020
+    Last step completed in 00:00:00.0029
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
@@ -112,8 +112,7 @@ Processing topics...
 Processed 37 topic(s)
 CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 2 of 15.
 CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
-ResolveReferenceLinksComponent: 1 entries added to the member ID URL cache.  New cache size: 553 entries
-    Last step completed in 00:00:01.7300
+    Last step completed in 00:00:01.4986
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -122,7 +121,7 @@ Processing Help 1 files in D:\file\program\zhyhub\c\Zhy.Components\Zhy.Component
 Processed 37 HTML files.  Sorting keywords and generating See Also indices.
 Saving HTML Help 1 keyword index to D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\Zhy.Components.Configuration.Documentation.hhk
 Saving HTML Help 1 table of contents to D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\Zhy.Components.Configuration.Documentation.hhc
-    Last step completed in 00:00:00.0084
+    Last step completed in 00:00:00.0090
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -185,7 +184,7 @@ D:\software\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\bra
 D:\software\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-CN.css -&gt; D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 D:\software\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding-zh-TW.css -&gt; D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 D:\software\EWSoftware\Sandcastle Help File Builder\Components\VS2013\styles\branding.css -&gt; D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00.0521
+    Last step completed in 00:00:00.0519
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
@@ -219,19 +218,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created d:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\Zhy.Components.Configuration.Documentation.chm, 81,989 bytes
+  Created d:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Doc\Help\CHM\Working\Output\HtmlHelp1\Zhy.Components.Configuration.Documentation.chm, 82,341 bytes
   
-  Compression decreased file by 254,645 bytes.
+  Compression decreased file by 255,571 bytes.
   
-    Last step completed in 00:00:00.5465
+    Last step completed in 00:00:00.5544
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.0251
+    Last step completed in 00:00:00.0259
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 2024/2/4 13:59:05.  Total time: 00:00:03.5972
+Build completed successfully at 2024/2/4 15:01:13.  Total time: 00:00:03.4016
 
 </buildStep>
 </shfbBuild>

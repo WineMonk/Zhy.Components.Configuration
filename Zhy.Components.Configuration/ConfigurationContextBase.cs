@@ -8,6 +8,7 @@ namespace Zhy.Components.Configuration
     /// </summary>
     public abstract class ConfigurationContextBase : IConfigurationContext, IDisposable
     {
+
         private ConfigurationFileSystemWatcher? _watcher;
         /// <summary>
         /// 配置上下文基类

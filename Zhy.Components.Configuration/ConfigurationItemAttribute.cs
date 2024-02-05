@@ -3,6 +3,7 @@
     /// <summary>
     /// 配置项特性
     /// </summary>
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
     public class ConfigurationItemAttribute : Attribute
     {
         private string? _name;
@@ -36,35 +37,35 @@
         /// <summary>
         /// 配置项特性
         /// </summary>
-        /// <param name="configurationEncipherType">加密器</param>
-        /// <param name="configurationConverterType">转换器</param>
-        public ConfigurationItemAttribute(Type? configurationEncipherType = null, Type? configurationConverterType = null)
+        /// <param name="encipherType">加密器</param>
+        /// <param name="converterType">转换器</param>
+        public ConfigurationItemAttribute(Type? encipherType = null, Type? converterType = null)
         {
-            if (configurationEncipherType != null)
+            if (encipherType != null)
             {
-                _encipher = Activator.CreateInstance(configurationEncipherType) as IConfigurationEncipher;
+                _encipher = Activator.CreateInstance(encipherType) as IConfigurationEncipher;
             }
-            if (configurationConverterType != null)
+            if (converterType != null)
             {
-                _converter = Activator.CreateInstance(configurationConverterType) as IConfigurationConverter;
+                _converter = Activator.CreateInstance(converterType) as IConfigurationConverter;
             }
         }
         /// <summary>
         /// 配置项特性
         /// </summary>
         /// <param name="name">键值</param>
-        /// <param name="configurationEncipherType">加密器</param>
-        /// <param name="configurationConverterType">转换器</param>
-        public ConfigurationItemAttribute(string name, Type configurationEncipherType, Type configurationConverterType)
+        /// <param name="encipherType">加密器</param>
+        /// <param name="converterType">转换器</param>
+        public ConfigurationItemAttribute(string name, Type encipherType, Type converterType)
         {
             _name = name;
-            if (configurationEncipherType != null)
+            if (encipherType != null)
             {
-                _encipher = Activator.CreateInstance(configurationEncipherType) as IConfigurationEncipher;
+                _encipher = Activator.CreateInstance(encipherType) as IConfigurationEncipher;
             }
-            if (configurationConverterType != null)
+            if (converterType != null)
             {
-                _converter = Activator.CreateInstance(configurationConverterType) as IConfigurationConverter;
+                _converter = Activator.CreateInstance(converterType) as IConfigurationConverter;
             }
         }
     }

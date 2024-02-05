@@ -25,3 +25,4 @@ D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Zhy.Compone
 D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Zhy.Components.Configuration\obj\Debug\net6.0\ref\Zhy.Components.Configuration.dll
 D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Zhy.Components.Configuration\bin\Debug\net6.0\Zhy.Components.Configuration.xml
 D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Zhy.Components.Configuration\obj\Debug\net6.0\Zhy.Components.Configuration.xml
+D:\file\program\zhyhub\c\Zhy.Components\Zhy.Components.Configuration\Zhy.Components.Configuration\obj\Debug\net6.0\Zhy.Components.Configuration.sourcelink.json

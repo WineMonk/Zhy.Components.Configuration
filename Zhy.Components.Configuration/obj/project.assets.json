@@ -391,6 +391,7 @@
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
       "outputPath": "D:\\file\\program\\zhyhub\\c\\Zhy.Components\\Zhy.Components.Configuration\\Zhy.Components.Configuration\\obj\\",
       "projectStyle": "PackageReference",
+      "crossTargeting": true,
       "fallbackFolders": [
         "D:\\software\\DevExpress 23.1\\Components\\Offline Packages",
         "D:\\software\\Microsoft Visual Studio\\Shared\\NuGetPackages"

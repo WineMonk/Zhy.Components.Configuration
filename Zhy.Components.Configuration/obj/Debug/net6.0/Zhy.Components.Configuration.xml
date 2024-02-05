@@ -103,16 +103,16 @@
             <summary>
             配置项特性
             </summary>
-            <param name="configurationEncipherType">加密器</param>
-            <param name="configurationConverterType">转换器</param>
+            <param name="encipherType">加密器</param>
+            <param name="converterType">转换器</param>
         </member>
         <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Type,System.Type)">
             <summary>
             配置项特性
             </summary>
             <param name="name">键值</param>
-            <param name="configurationEncipherType">加密器</param>
-            <param name="configurationConverterType">转换器</param>
+            <param name="encipherType">加密器</param>
+            <param name="converterType">转换器</param>
         </member>
         <member name="T:Zhy.Components.Configuration.IConfigurationContext">
             <summary>

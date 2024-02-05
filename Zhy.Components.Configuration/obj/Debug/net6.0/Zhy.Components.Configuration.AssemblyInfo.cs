@@ -11,13 +11,17 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Zhy.Components.Configuration")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("WineMonk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("©2024 By WineMonk")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Config配置文件组件，支持运行时读取、写入配置，动态监测配置文件无感刷新、加解密、运行时类型转换器...")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+409913455108fb3ecd9b7d1a42f94c22e98b4751")]
 [assembly: System.Reflection.AssemblyProductAttribute("Zhy.Components.Configuration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Zhy.Components.Configuration")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/WineMonk/Zhy.Components.Configuration.git")]
+[assembly: System.Resources.NeutralResourcesLanguageAttribute("zh-CN")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 
