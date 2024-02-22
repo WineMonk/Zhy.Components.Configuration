@@ -1,4 +1,8 @@
-﻿namespace Zhy.Components.Configuration
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace Zhy.Components.Configuration
 {
     /// <summary>
     /// 配置文件监视器
@@ -23,7 +27,7 @@
             //}
             _configurationContext = configurationContext;
             string confPath = configurationContext.GetPersistentPath();
-            string? confFolder = System.IO.Path.GetDirectoryName(confPath);
+            string confFolder = System.IO.Path.GetDirectoryName(confPath);
             string confFileName = System.IO.Path.GetFileName(confPath);
             if (!string.IsNullOrEmpty(confFolder))
             {
@@ -46,7 +50,7 @@
             {
                 return;
             }
-            ConfigurationFileSystemWatcher? configurationFileSystemWatcher = sender as ConfigurationFileSystemWatcher;
+            ConfigurationFileSystemWatcher configurationFileSystemWatcher = sender as ConfigurationFileSystemWatcher;
             if (configurationFileSystemWatcher == null)
             {
                 return;

@@ -1,4 +1,6 @@
-﻿namespace Zhy.Components.Configuration
+﻿using System;
+
+namespace Zhy.Components.Configuration
 {
     /// <summary>
     /// 配置上下文特性

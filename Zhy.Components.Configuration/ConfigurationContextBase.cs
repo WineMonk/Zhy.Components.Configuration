@@ -1,4 +1,7 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Zhy.Components.Configuration
@@ -9,7 +12,7 @@ namespace Zhy.Components.Configuration
     public abstract class ConfigurationContextBase : IConfigurationContext, IDisposable
     {
 
-        private ConfigurationFileSystemWatcher? _watcher;
+        private ConfigurationFileSystemWatcher _watcher;
         /// <summary>
         /// 配置上下文基类
         /// </summary>
@@ -52,7 +55,7 @@ namespace Zhy.Components.Configuration
         private void InitWatcher()
         {
             Type type = GetType();
-            ConfigurationContextAttribute? configurationContextAttribute = type.GetCustomAttribute<ConfigurationContextAttribute>();
+            ConfigurationContextAttribute configurationContextAttribute = type.GetCustomAttribute<ConfigurationContextAttribute>();
             if (configurationContextAttribute == null)
             {
                 return;
@@ -66,7 +69,7 @@ namespace Zhy.Components.Configuration
         private System.Configuration.Configuration GetConfiguration()
         {
             string persistentPath = GetPersistentPath();
-            string? persistentDirectoryPath = Path.GetDirectoryName(persistentPath);
+            string persistentDirectoryPath = Path.GetDirectoryName(persistentPath);
             if (persistentDirectoryPath == null)
             {
                 throw new NotSupportedException($"非法路径：{persistentPath}");
@@ -83,7 +86,7 @@ namespace Zhy.Components.Configuration
         }
         private void InjectItem(System.Configuration.Configuration configuration, PropertyInfo prop)
         {
-            ConfigurationItemAttribute? configurationItemAttribute =
+            ConfigurationItemAttribute configurationItemAttribute =
                     prop.GetCustomAttribute<ConfigurationItemAttribute>();
             if (configurationItemAttribute == null)
             {
@@ -115,14 +118,14 @@ namespace Zhy.Components.Configuration
         }
         private void ExtractItem(System.Configuration.Configuration configuration, PropertyInfo prop)
         {
-            ConfigurationItemAttribute? configurationItemAttribute =
+            ConfigurationItemAttribute configurationItemAttribute =
                      prop.GetCustomAttribute<ConfigurationItemAttribute>();
             if (configurationItemAttribute == null)
             {
                 return;
             }
             string key = configurationItemAttribute.Name ?? prop.Name;
-            object? value = configuration.AppSettings.Settings[key]?.Value;
+            object value = configuration.AppSettings.Settings[key]?.Value;
             if (configurationItemAttribute.Converter != null)
             {
                 value = configurationItemAttribute
