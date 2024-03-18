@@ -11,19 +11,26 @@
         </member>
         <member name="P:Zhy.Components.Configuration.ConfigurationContextAttribute.IsHotload">
             <summary>
-            配置文件是否热重载（开启时将监测配置文件动态变化，修改后自动刷新至运行时）
+            配置文件是否热重载，默认True。
             </summary>
+            <remarks>
+            开启时将监测配置文件动态变化，修改后自动刷新至运行时。
+            </remarks>
         </member>
-        <member name="M:Zhy.Components.Configuration.ConfigurationContextAttribute.#ctor">
+        <member name="P:Zhy.Components.Configuration.ConfigurationContextAttribute.IsInitialGeneration">
+            <summary>
+            配置文件是否初始化生成，默认True。
+            </summary>
+            <remarks>
+            配置文件不存在时，根据默认配置生成配置文件。
+            </remarks>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationContextAttribute.#ctor(System.Boolean,System.Boolean)">
             <summary>
             配置上下文特性
             </summary>
-        </member>
-        <member name="M:Zhy.Components.Configuration.ConfigurationContextAttribute.#ctor(System.Boolean)">
-            <summary>
-            配置上下文特性
-            </summary>
-            <param name="isHotLoad">是否热重载</param>
+            <param name="isHotLoad">配置文件是否热重载</param>
+            <param name="isInitialGeneration">配置文件是否初始化生成</param>
         </member>
         <member name="T:Zhy.Components.Configuration.ConfigurationContextBase">
             <summary>
@@ -73,9 +80,14 @@
             配置项特性
             </summary>
         </member>
-        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Name">
+        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Key">
             <summary>
             键值
+            </summary>
+        </member>
+        <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.DefaultValue">
+            <summary>
+            默认值
             </summary>
         </member>
         <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Converter">
@@ -85,7 +97,7 @@
         </member>
         <member name="P:Zhy.Components.Configuration.ConfigurationItemAttribute.Encipher">
             <summary>
-            转换器
+            类型转换器
             </summary>
         </member>
         <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor">
@@ -97,22 +109,31 @@
             <summary>
             配置项特性
             </summary>
-            <param name="name">键值</param>
+            <param name="key">键值</param>
         </member>
-        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.Type,System.Type)">
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Object)">
             <summary>
             配置项特性
             </summary>
-            <param name="encipherType">加密器</param>
-            <param name="converterType">转换器</param>
+            <param name="key">键值</param>
+            <param name="defaultValue">默认值</param>
         </member>
-        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Type,System.Type)">
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Object,System.Type)">
             <summary>
             配置项特性
             </summary>
-            <param name="name">键值</param>
-            <param name="encipherType">加密器</param>
-            <param name="converterType">转换器</param>
+            <param name="key">键值</param>
+            <param name="defaultValue">默认值</param>
+            <param name="converterType">转换器类型</param>
+        </member>
+        <member name="M:Zhy.Components.Configuration.ConfigurationItemAttribute.#ctor(System.String,System.Object,System.Type,System.Type)">
+            <summary>
+            配置项特性
+            </summary>
+            <param name="key">键值</param>
+            <param name="defaultValue">默认值</param>
+            <param name="converterType">转换器类型</param>
+            <param name="encipherType">加密器类型</param>
         </member>
         <member name="T:Zhy.Components.Configuration.IConfigurationContext">
             <summary>
@@ -137,7 +158,7 @@
         </member>
         <member name="T:Zhy.Components.Configuration.IConfigurationConverter">
             <summary>
-            配置转换器接口
+            配置类型转换器接口
             </summary>
         </member>
         <member name="M:Zhy.Components.Configuration.IConfigurationConverter.Read(System.String)">

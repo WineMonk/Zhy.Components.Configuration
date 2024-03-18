@@ -15,7 +15,7 @@ namespace Zhy.Components.Configuration
         /// </summary>
         /// <param name="configurationContext">配置文件上下文</param>
         /// <exception cref="ArgumentNullException">配置文件上下文参数为空异常</exception>
-        public ConfigurationFileSystemWatcher(IConfigurationContext configurationContext)
+        internal ConfigurationFileSystemWatcher(IConfigurationContext configurationContext)
         {
             if (configurationContext == null)
             {

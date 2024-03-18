@@ -19,6 +19,7 @@ namespace Zhy.Components.Configuration
         protected ConfigurationContextBase()
         {
             Reload();
+            InitialGeneration();
             InitWatcher();
         }
         /// <summary>
@@ -48,7 +49,14 @@ namespace Zhy.Components.Configuration
             PropertyInfo[] propertyInfos = GetType().GetProperties();
             foreach (var prop in propertyInfos)
             {
-                ExtractItem(configuration, prop);
+                if (configuration.HasFile)
+                {
+                    ExtractItem(configuration, prop);
+                }
+                else
+                {
+                    ExtractItemDefaultValue(configuration, prop);
+                }
             }
         }
 
@@ -64,6 +72,19 @@ namespace Zhy.Components.Configuration
             if (isHotload)
             {
                 _watcher = new ConfigurationFileSystemWatcher(this);
+            }
+        }
+        private void InitialGeneration()
+        {
+            System.Configuration.Configuration configuration = GetConfiguration();
+            if (!configuration.HasFile)
+            {
+                Type type = GetType();
+                ConfigurationContextAttribute configurationContextAttribute = type.GetCustomAttribute<ConfigurationContextAttribute>();
+                if (configurationContextAttribute != null && configurationContextAttribute.IsInitialGeneration)
+                {
+                    Persistent();
+                }
             }
         }
         private System.Configuration.Configuration GetConfiguration()
@@ -93,7 +114,7 @@ namespace Zhy.Components.Configuration
                 return;
             }
             object value = prop.GetValue(this) ?? string.Empty;
-            string key = configurationItemAttribute.Name ?? prop.Name;
+            string key = configurationItemAttribute.Key ?? prop.Name;
             if (configurationItemAttribute.Encipher != null)
             {
                 value = configurationItemAttribute
@@ -124,7 +145,7 @@ namespace Zhy.Components.Configuration
             {
                 return;
             }
-            string key = configurationItemAttribute.Name ?? prop.Name;
+            string key = configurationItemAttribute.Key ?? prop.Name;
             object value = configuration.AppSettings.Settings[key]?.Value;
             if (configurationItemAttribute.Converter != null)
             {
@@ -142,6 +163,20 @@ namespace Zhy.Components.Configuration
             }
             object convertedValue = value;
             prop.SetValue(this, convertedValue);
+        }
+        private void ExtractItemDefaultValue(System.Configuration.Configuration configuration, PropertyInfo prop)
+        {
+            ConfigurationItemAttribute configurationItemAttribute =
+                     prop.GetCustomAttribute<ConfigurationItemAttribute>();
+            if (configurationItemAttribute == null)
+            {
+                return;
+            }
+            if (configurationItemAttribute.DefaultValue == default)
+            {
+                return;
+            }
+            prop.SetValue(this, configurationItemAttribute.DefaultValue);
         }
         /// <summary>
         /// 释放资源

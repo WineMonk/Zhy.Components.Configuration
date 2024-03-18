@@ -1,7 +1,7 @@
 ﻿namespace Zhy.Components.Configuration
 {
     /// <summary>
-    /// 配置转换器接口
+    /// 配置类型转换器接口
     /// </summary>
     public interface IConfigurationConverter
     {

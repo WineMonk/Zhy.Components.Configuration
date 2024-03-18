@@ -36,7 +36,7 @@ public class TestEncipher : IConfigurationEncipher
 
 ```csharp
 /// <summary>
-/// 转换器
+/// 类型转换器
 /// </summary>
 public class IntNullableConfigurationConverter : IConfigurationConverter
 {
@@ -67,18 +67,18 @@ public class IntNullableConfigurationConverter : IConfigurationConverter
 /// <summary>
 /// 配置上下文
 /// </summary>
-[ConfigurationContext(IsHotload = true)]
+[ConfigurationContext(isHotLoad: true, isInitialGeneration: true)]
 public class AppConfig : ConfigurationContextBase
 {
     public string? ActiveToken { get; set; }
     
-    [ConfigurationItem("active_user")]
+    [ConfigurationItem(key: "active_user")]
     public string? ActiveUser { get; set; }
 
-    [ConfigurationItem("active_user_pwd", encipherType: typeof(TestEncipher))]
+    [ConfigurationItem(key: "active_user_pwd", encipherType: typeof(TestEncipher))]
     public string? ActiveUserPassword { get; set; }
 
-    [ConfigurationItem("request_timeout_s", converterType: typeof(IntNullableConfigurationConverter))]
+    [ConfigurationItem(key: "request_timeout_s", defaultValue: 10, converterType: typeof(IntNullableConfigurationConverter))]
     public int? TimeOut { get; set; }
 
     private static AppConfig? _instance;
@@ -89,7 +89,7 @@ public class AppConfig : ConfigurationContextBase
     }
     public override string GetPersistentPath()
     {
-        return AppDomain.CurrentDomain.BaseDirectory + "bin\\conf\\app.config";
+        return AppDomain.CurrentDomain.BaseDirectory + "conf\\app.config";
     }
 }
 ```

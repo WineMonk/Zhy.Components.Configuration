@@ -12,15 +12,15 @@
 	<PackageProjectUrl>https://github.com/WineMonk/Zhy.Components.Configuration.git</PackageProjectUrl>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<RepositoryUrl>https://github.com/WineMonk/Zhy.Components.Configuration.git</RepositoryUrl>
-	<PackageTags>CSharp;Configuration;</PackageTags>
+	<PackageTags>Zhy;Configuration;</PackageTags>
 	<NeutralLanguage>zh-CN</NeutralLanguage>
-	<AssemblyVersion>2.0.0</AssemblyVersion>
-	<FileVersion>2.0.0</FileVersion>
+	<AssemblyVersion>2.0.1</AssemblyVersion>
+	<FileVersion>2.0.1</FileVersion>
 	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<Version>2.0.0</Version>
+	<Version>2.0.1</Version>
 	<PackageIcon>logo_light@180.png</PackageIcon>
-	<PackageReleaseNotes>更新支持版本</PackageReleaseNotes>
+	<PackageReleaseNotes>1. 配置项新增默认值属性；2. 新增初始化生成配置文件功能；</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
